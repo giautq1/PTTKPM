@@ -1,0 +1,6 @@
+E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\bin\Debug\DAL.dll
+E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\bin\Debug\DAL.pdb
+E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\obj\Debug\DAL.dll
+E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,40 @@
+﻿@using System.Web;
+@using Kendo.Mvc.UI;
+@using Kendo.Mvc;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Đăng nhập</title>
+    <script src="~/Scripts/JAccount.js" type="text/javascript"></script>
+</head>
+<body>
+    <table cellpadding="1" cellspacing="1" width="30%">
+        <tr>
+            <td style="width:30%"><span class="h-label">Tên đăng nhập</span></td>
+            <td><input type="text" id="txtUsername" name="txtUsername" class="h-textbox" autofocus /></td>
+        </tr>
+        <tr>
+            <td><span class="h-label">Mật khẩu</span></td>
+            <td><input type="password" id="txtPassword" name="txtPassword" class="h-textbox" /></td>
+        </tr>
+        <tr style="height:50px;">
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <input type="button" id="btnLogin" class="h-button" value="Đăng nhập" style="width: 40%;" onclick="CheckLogin()" />
+                <input type="button" id="btnRegister" class="h-button" value="Đăng ký" style="width: 40%;" onclick="RedirecRegister()" />
+                <input type="hidden" id="txtSession" value="@ViewBag.Username" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+

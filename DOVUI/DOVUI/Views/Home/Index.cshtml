@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<script src="~/Scripts/jIndex.js"></script>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ai là triệu phú</title>
+</head>
+<body>
+    <audio id="adIntro">
+        <source src="~/Audio/Intro.wav" />
+    </audio>
+    @if (!string.IsNullOrEmpty(ViewBag.Username))
+    {
+        <div>
+            <input type="hidden" id="fAccountID" value=@ViewBag.AccountID />
+            <p style="color:white">Chào bạn: <strong>@ViewBag.Username</strong>  &nbsp;<span onclick="LogOut()" style="color:red; cursor:pointer">Thoát</span></p>
+            <input type="button" id="btnLogin" class="h-button" value="Tham gia" style="width:12%" onclick="RedirecPlay()" />
+            <input type="button" id="btnRegister" class="h-button" value="Xem lịch sử" style="width:12%" onclick="RedirecHistory()" />
+            @if (Session["Type"].ToString() == "1")
+            {
+                <input type="button" class="h-button" id="btnQuestion" value="Quản lý câu hỏi" style="width:12%" onclick="RedirecQLCH()" />
+            }
+        </div>
+    }
+    else
+    {
+        <div>
+            <input type="button" id="btnLogin" class="h-button" value="Đăng nhập" style="width:12%" onclick="RedirecLogin()" />
+            <input type="button" id="btnRegister" class="h-button" value="Đăng ký" style="width:12%" onclick="RedirecRegister()" />
+        </div>
+    }
+</body>
+</html>

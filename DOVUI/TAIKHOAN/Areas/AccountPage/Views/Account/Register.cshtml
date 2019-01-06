@@ -1,0 +1,39 @@
+﻿@using System.Web;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<script src="~/Scripts/JAccount.js"></script>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Đăng ký tài khoản</title>
+</head>
+<body>
+    <table cellpadding="1" cellspacing="1" width="30%">
+        <tr>
+            <td style="width:30%"><span class="h-label">Họ và tên</span></td>
+            <td><input type="text" id="txtFullname" name="txtFullname" class="h-textbox" autofocus /></td>
+        </tr>
+        <tr>
+            <td><span class="h-label">Tên đăng nhập</span></td>
+            <td><input type="text" id="txtUsername" name="txtUsername" class="h-textbox" /></td>
+        </tr>
+        <tr>
+            <td><span class="h-label">Mật khẩu</span></td>
+            <td><input type="password" id="txtPassword" name="txtPassword" class="h-textbox" /></td>
+        </tr>
+        <tr style="height:50px;">
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <input type="button" id="btnRegister" class="h-button" value="Đăng ký" style="width: 40%;" onclick="Register()" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

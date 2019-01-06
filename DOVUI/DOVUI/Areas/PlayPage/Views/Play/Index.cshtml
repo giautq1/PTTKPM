@@ -1,0 +1,207 @@
+﻿@using System.Web;
+@using Kendo.Mvc.UI;
+@using Kendo.Mvc;
+
+@{
+    Layout = "~/Views/Shared/_LayoutPlay.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/JPlay.js"></script>
+    <script src="~/Scripts/handlebars-v4.0.12.js"></script>      
+    @Scripts.Render("~/chart/jquery")
+</head>
+<body style="width:500px;">
+    <div>
+        <audio id="adC1">
+            <source src="~/Audio/Audio-C1.wav" />
+        </audio>
+        <audio id="adTeStart">
+            <source src="~/Audio/Telephone_Start.wav" />
+        </audio>
+        <audio id="adTeEnd">
+            <source src="~/Audio/Telephone_End.wav" />
+        </audio>
+        <audio id="adBG1">
+            <source src="~/Audio/AudioBG1.wav" />
+        </audio>
+        <audio id="ad5050">
+            <source src="~/Audio/50_50.wav" />
+        </audio>
+        <audio id="adCall">
+            <source src="~/Audio/30S.wav" />
+        </audio>
+        <audio id="adHKG">
+            <source src="~/Audio/Audio_HKG.wav" />
+        </audio>
+        <audio id="adSelectDA">
+            <source src="~/Audio/SelectDA.wav" />
+        </audio>
+        <audio id="adWrong">
+            <source src="~/Audio/Wrong.wav" />
+        </audio>
+        <audio id="adRight">
+            <source src="~/Audio/Right.wav" />
+        </audio>
+        <audio id="adRight5">
+            <source src="~/Audio/Right_5.wav" />
+        </audio>
+        <audio id="adStart">
+            <source src="~/Audio/Start.wav" />
+        </audio>
+    </div>
+    <div id="support" style="position:fixed; padding: 15px 15px; width:100%; display:none;">
+        <table cellspacing="0" cellpadding="1" style="width:98%;">
+            <tr>
+                <td width="50%">
+                    <img src="~/Images/5050.png" id="btn5050" onclick="Support5050()" class="h-support" />
+                    <img src="~/Images/Call.png" id="btnCall" onclick="SupportCall()" class="h-support" />
+                    <img src="~/Images/HKG.png" id="btnHKG" onclick="SupportHKG()" class="h-support" />
+                </td>
+                <td align="right">
+                    <img src="~/Images/Stop.png" id="btnStop" onclick="Stop(1)" class="h-support" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="divMoney" style="padding: 15px 15px; width:15%; display: none;" class="h-money">
+        <table cellspacing="0" cellpadding="1" style="width:100%;">
+            <tbody id="lstPrize"></tbody>
+            @*<tr id="trmoney15" style="color: yellow;">
+                <td width="25%">15</td>
+                <td width="5%">*</td>
+                <td>100,000,000</td>
+            </tr>
+            <tr id="trmoney14">
+                <td width="30%">14</td>
+                <td width="5%">*</td>
+                <td>85,000,000</td>
+            </tr>
+            <tr id="trmoney13">
+                <td width="30%">13</td>
+                <td width="5%">*</td>
+                <td>60,000,000</td>
+            </tr>
+            <tr id="trmoney12">
+                <td width="30%">12</td>
+                <td width="5%">*</td>
+                <td>40,000,000</td>
+            </tr>
+            <tr id="trmoney11">
+                <td width="30%">11</td>
+                <td width="5%">*</td>
+                <td>30,000,000</td>
+            </tr>
+            <tr id="trmoney10" style="color: yellow;">
+                <td width="30%">10</td>
+                <td width="5%">*</td>
+                <td>22,000,000</td>
+            </tr>
+            <tr id="trmoney9">
+                <td width="30%">9</td>
+                <td width="5%">*</td>
+                <td>14,000,000</td>
+            </tr>
+            <tr id="trmoney8">
+                <td width="30%">8</td>
+                <td width="5%">*</td>
+                <td>10,000,000</td>
+            </tr>
+            <tr id="trmoney7">
+                <td width="30%">7</td>
+                <td width="5%">*</td>
+                <td>6,000,000</td>
+            </tr>
+            <tr id="trmoney6">
+                <td width="30%">6</td>
+                <td width="5%">*</td>
+                <td>3,000,000</td>
+            </tr>
+            <tr id="trmoney5" style="color: yellow;">
+                <td width="30%">5</td>
+                <td width="5%">*</td>
+                <td>2,000,000</td>
+            </tr>
+            <tr id="trmoney4">
+                <td width="30%">4</td>
+                <td width="5%">*</td>
+                <td>1,000,000</td>
+            </tr>
+            <tr id="trmoney3">
+                <td width="30%">3</td>
+                <td width="5%">*</td>
+                <td>600,000</td>
+            </tr>
+            <tr id="trmoney2">
+                <td width="30%">2</td>
+                <td width="5%">*</td>
+                <td>400,000</td>
+            </tr>
+            <tr id="trmoney1">
+                <td width="30%">1</td>
+                <td width="5%">*</td>
+                <td>200,000</td>
+            </tr>*@
+        </table>
+    </div>
+
+    <div class="h-chart" id="frHKG"><canvas id="fCanvas" height="100" width="100"></canvas></div>
+    <div class="h-call" id="frCall30S" style="display:none"><span id="frDis30S" height="50" width="50">30</span></div>
+    <div><center><img src="~/Images/logo33.png" style="width:20%; margin-top:50px;" onload="GetQuestionLevel(1)" /></center></div>
+    <div id="mContent" style="display:none;">
+        <input type="hidden" id="frQuestionID" value="0" />
+        <input type="hidden" id="frLevel" value="0" />
+        <input type="hidden" id="frMoney" value="0" />
+        <table cellspacing="0" cellpadding="1" style="width:60%; margin:auto">
+            <tr>
+                <td width="50%"><span class="h-hexagon" style="width: 30%;margin-bottom: 10px;padding: 5px 0px;font-weight: bold;">Câu <span id="fLevel">1</span></span></td>
+                <td style="text-align:right"><span class="h-hexagon" style="min-width: 40%;margin-bottom: 10px;padding: 5px 0px;font-weight: bold;"><span id="fMoney">0</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="h-hexagon h-question">
+                        <span id="fContent">Ronaldo cắt tóc ở đâu?</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="SelectDA(1)" id="tdAnswer1">
+                    <div class="h-hexagon h-answer" id="A1">
+                        <span style="color:orange">A:</span> <span id="fAnswerA">Roma</span>
+                    </div>
+                </td>
+                <td onclick="SelectDA(2)" id="tdAnswer2" class="h-tdright">
+                    <div class="h-hexagon h-answer" id="A2">
+                        <span style="color:orange">B:</span> <span id="fAnswerB">Madrid</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="SelectDA(3)" id="tdAnswer3">
+                    <div class="h-hexagon h-answer" id="A3">
+                        <span style="color:orange">C:</span> <span id="fAnswerC">Paris</span>
+                    </div>
+                </td>
+                <td onclick="SelectDA(4)" id="tdAnswer4" class="h-tdright">
+                    <div class="h-hexagon h-answer" id="A4">
+                        <span style="color:orange">D:</span> <span id="fAnswerD">London</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script id="Prize-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <tr id="trmoney{{Level}}">
+            <td width="25%">{{Level}}</td>
+            <td>*</td>
+            <td width="5%">{{Money}}</td>
+        </tr>
+        {{/each}}
+    </script>
+</body>
+</html>

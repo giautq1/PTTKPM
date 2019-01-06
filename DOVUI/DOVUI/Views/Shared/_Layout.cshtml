@@ -1,0 +1,90 @@
+﻿@using Kendo.Mvc.UI;
+@using Kendo.Mvc;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+    <link href="~/Content/themes/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/kendo.default.min.css" rel="stylesheet" />
+    @*<link href="~/Content/themes/bootstrap.min.css" rel="stylesheet" />*@
+    @*<script src="~/Scripts/bootstrap.min.js"></script>*@
+    <link rel="icon" type="img/ico" href="~/favicon.ico">
+    <script src="~/Scripts/kendo.all.min.js"></script>
+    <script src="~/Scripts/jIndex.js"></script>
+</head>
+<body style="margin:auto">
+    <div><center><img src="~/Images/logo3.png" style="width:30%;" /></center></div>
+    <div>
+        <center>
+            @RenderBody()
+        </center>
+    </div>
+    <div id="popup" align="center" style="padding: 0px;">
+        <div id="pcontain"></div>
+    </div>
+    <div id="loading">
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#popup").kendoWindow({
+            width: "400px",
+            height: "130px",
+            actions: [],
+            modal: true,
+            title: "Thông Báo",
+            resizable: false,
+            iframe: true,
+            visible: false
+        });
+    });
+
+    function loadPopup(text1, text2, button) {
+        var strAlert = "";
+        if (text1 != "") {
+            strAlert = "<p>" + text1 + "</p>";
+        }
+        if (text2 != "") {
+            strAlert = strAlert + "<p>" + text2 + "</p>";
+        }
+        if (button != 0) {
+            status = button;
+            strAlert = strAlert + '<button type="button" id="btnOK" class="k-button k-primary" style="width:80px;" onClick="ClosePopup(' + button + ')">OK</button>';
+        }
+        document.all('pcontain').innerHTML = strAlert;
+        Load = 1;
+        $("#popup").data("kendoWindow").center();
+        $("#popup").data("kendoWindow").open();
+    }
+
+    function ClosePopup(id) {
+        $("#popup").data("kendoWindow").close();
+    }
+</script>
+<style>
+    .k-header {
+        /*border-color: #f6813f;*/
+    }
+
+    #popup_wnd_title {
+        color: #FFFFFF;
+    }
+
+    .k-window-titlebar {
+        background-color: #184179;
+    }
+
+    #pcontain {
+        padding-top: 10px;
+    }
+</style>
+</html>
