@@ -61,3 +61,4 @@ C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\CAUHOI\bin\roslyn\VBCSCom
 C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\CAUHOI\obj\Debug\CAUHOI.csproj.CoreCompileInputs.cache
 C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\CAUHOI\obj\Debug\CAUHOI.dll
 C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\CAUHOI\obj\Debug\CAUHOI.pdb
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\CAUHOI\obj\Debug\CAUHOI.csprojResolveAssemblyReference.cache

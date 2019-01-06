@@ -155,3 +155,4 @@ C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\API_DOVUI\API_DOVUI\obj\Debug\A
 C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\API_DOVUI\API_DOVUI\obj\Debug\API_DOVUI.csproj.CopyComplete
 C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\API_DOVUI\API_DOVUI\obj\Debug\API_DOVUI.dll
 C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\API_DOVUI\API_DOVUI\obj\Debug\API_DOVUI.pdb
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\API_DOVUI\API_DOVUI\obj\Debug\API_DOVUI.csprojResolveAssemblyReference.cache

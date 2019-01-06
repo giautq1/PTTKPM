@@ -22,7 +22,7 @@ namespace CAUHOI.Areas.QuestionPage.Controllers
             return View();
         }
 
-        public ResData Create(string Content, int Level, string AnswerA, string AnswerB, string AnswerC, string AnswerD, int IsResult)
+        public JsonResult Create(string Content, int Level, string AnswerA, string AnswerB, string AnswerC, string AnswerD, int IsResult)
         {
             ResData res = new ResData();
             if (String.IsNullOrEmpty(Content))
@@ -44,7 +44,7 @@ namespace CAUHOI.Areas.QuestionPage.Controllers
                     res.Desc = "Thêm mới thất bại";
             }
                 
-            return res;
+            return Json(res);
         }
     }
 }
