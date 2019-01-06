@@ -12,48 +12,102 @@ namespace THAMGIA.Areas.PlayPage.Models
     {
         public static int CheckAnswer(int QuestionID, int AnswerLevel)
         {
-            SqlParameter Result = new SqlParameter();
-            Result.DbType = DbType.Int32;
-            Result.ParameterName = "@Result";
-            Result.Direction = ParameterDirection.Output;
+            int check = 0;
+            try
+            {
+                var data = new DataRequest
+                {
+                    Content = new
+                    {
+                        QuestionID = QuestionID,
+                        AnswerLevel = AnswerLevel
+                    }
+                };
 
-            SqlParameter[] pars = {
-                new SqlParameter ("QuestionID", QuestionID),
-                new SqlParameter ("AnswerLevel", AnswerLevel),
-                Result
-            };
+                var result = Function.CallAPI(Function.API_URL + "api/question/checkanswer", Function.API_Method.POST, data);
+                if (result.GetValue("StatusCode").ToString() == "200")
+                {
+                    check = int.Parse(result.GetValue("Detail").ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                //return ex.Message;
+            }
 
-            DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.StoredProcedure, "CheckAnswer", pars);
-
-            return Int32.Parse(Result.Value.ToString());
+            return check;
         }
 
         public static string GetMoney(int QuestionLevel)
         {
-            return SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.Text, "Select Money From PrizeMoney WHERE Level=" + QuestionLevel.ToString()).Tables[0].Rows[0]["Money"].ToString();
+            string money = "0";
+            try
+            {
+                var data = new DataRequest
+                {
+                    Content = new
+                    {
+                        QuestionLevel = QuestionLevel
+                    }
+                };
+
+                var result = Function.CallAPI(Function.API_URL + "api/question/getmoney", Function.API_Method.POST, data);
+                if (result.GetValue("StatusCode").ToString() == "200")
+                {
+                    money = result.GetValue("Detail").ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                //return ex.Message;
+            }
+
+            return money;            
         }
 
         public static List<PrizeMoney> GetListPrize()
         {
             List<PrizeMoney> lst = new List<PrizeMoney>();
-            DataSet ds =  SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.Text, "SELECT Level, Money FROM PrizeMoney ORDER BY Level DESC");
-            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            try
             {
-                foreach (DataRow dr in ds.Tables[0].Rows)
+                var result = Function.CallAPI(Function.API_URL + "api/question/getlistprize", Function.API_Method.GET,null);
+                if (result.GetValue("StatusCode").ToString() == "200")
                 {
-                    PrizeMoney p = new PrizeMoney();
-                    p.Level = Int32.Parse(dr["Level"].ToString());
-                    double money = Double.Parse(dr["Money"].ToString());
-                    p.Money = money.ToString("#,###");
-                    lst.Add(p);
+                    lst = result.GetValue("Detail").ToObject<List<PrizeMoney>>();
                 }
+            }
+            catch (Exception ex)
+            {
+                //return ex.Message;
             }
             return lst;
         }
 
         public static string Support5050(int QuestionID)
         {
-            return SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.Text, "SELECT AnswerLevel FROM Answer WHERE QuestionID=" + QuestionID.ToString() + " AND ISNULL(IsResult, 0) = 1").Tables[0].Rows[0]["AnswerLevel"].ToString();
+            string money = "0";
+            try
+            {
+                var data = new DataRequest
+                {
+                    Content = new
+                    {
+                        QuestionID = QuestionID
+                    }
+                };
+
+                var result = Function.CallAPI(Function.API_URL + "api/question/support5050", Function.API_Method.POST, data);
+                if (result.GetValue("StatusCode").ToString() == "200")
+                {
+                    money = result.GetValue("Detail").ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                //return ex.Message;
+            }
+
+            return money;
         }
 
     }

@@ -24,21 +24,18 @@ namespace THAMGIA.Areas.PlayPage.Models
             QuestionM q = new QuestionM();
             try
             {
-                SqlParameter[] pars = {
-                new SqlParameter ("Level", Level)
-            };
-
-                DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.StoredProcedure, "GetQuestionLevel", pars);
-                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                var data = new DataRequest
                 {
-                    q.QuestionID = int.Parse(ds.Tables[0].Rows[0]["QuestionID"].ToString());
-                    q.Content = ds.Tables[0].Rows[0]["Content"].ToString();
-                    q.Level = int.Parse(ds.Tables[0].Rows[0]["Level"].ToString());
-                    q.AnswerA = ds.Tables[0].Rows[0]["AnswerA"].ToString();
-                    q.AnswerB = ds.Tables[0].Rows[0]["AnswerB"].ToString();
-                    q.AnswerC = ds.Tables[0].Rows[0]["AnswerC"].ToString();
-                    q.AnswerD = ds.Tables[0].Rows[0]["AnswerD"].ToString();
-                    q.IsResult = int.Parse(ds.Tables[0].Rows[0]["IsResult"].ToString());
+                    Content = new
+                    {
+                        Level = Level
+                    }
+                };
+
+                var result = Function.CallAPI(Function.API_URL + "api/question/getquestionlevel", Function.API_Method.POST, data);
+                if (result.GetValue("StatusCode").ToString() == "200")
+                {
+                    q = result.GetValue("Detail").ToObject<QuestionM>();
                 }
             }
             catch (Exception ex)

@@ -19,37 +19,27 @@ namespace LICHSU.Areas.HistoryPage.Models
         public string Finishdate { get; set; }
 
         public static List<HistoryM> GetListHistory(string AccountID)
-        {
+        {           
             List<HistoryM> lst = new List<HistoryM>();
-
-            SqlParameter[] pars = {
-                new SqlParameter ("AccountID", AccountID)
-            };
-
-            DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.StoredProcedure, "GetListHistory", pars);
-
-            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            try
             {
-                foreach (DataRow dr in ds.Tables[0].Rows)
+                var data = new DataRequest
                 {
-                    HistoryM his = new HistoryM();
-                    his.STT = Int32.Parse(dr["STT"].ToString());
-                    his.HistoryID = Int32.Parse(dr["HistoryID"].ToString());
-                    his.AccountID = Int32.Parse(dr["AccountID"].ToString());
-                    his.Level = Int32.Parse(dr["Level"].ToString());
-                    double total = Double.Parse(dr["Total"].ToString());
-                    if (total > 0)
-                        his.Total = total.ToString("#,#");
-                    else
-                        his.Total = "0";
-
-                    his.Createdate = dr["Createdate"].ToString();
-                    his.Finishdate = dr["Finishdate"].ToString();
-
-                    lst.Add(his);
+                    Content = new
+                    {
+                        AccountID = AccountID
+                    }
+                };
+                var result = Function.CallAPI(Function.API_URL + "api/history/getlisthistory", Function.API_Method.POST, data);
+                if (result.GetValue("StatusCode").ToString() == "200")
+                {
+                    lst = result.GetValue("Detail").ToObject<List<HistoryM>>();
                 }
             }
-
+            catch (Exception ex)
+            {
+                //return ex.Message;
+            }
             return lst;
         }
     }

@@ -20,20 +20,17 @@ namespace TAIKHOAN.Areas.AccountPage.Models
         {
             AccountM A = new AccountM();
 
-            DataSet ds = new DataSet();
-            SqlParameter[] pars = {
-                new SqlParameter ("Username", Username),
-                new SqlParameter ("Password", Password),
-            };
+            var data = new DataRequest{
+                        Content = new {
+                            Username = Username,
+                            Password = Password
+                        }
+                      };
 
-            ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.StoredProcedure, "Logging", pars);
-            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            var result = Function.CallAPI(Function.API_URL + "api/account/login", Function.API_Method.POST, data);
+            if(result.GetValue("StatusCode").ToString() == "200")
             {
-                A.AccountID = int.Parse(ds.Tables[0].Rows[0]["AccountID"].ToString());
-                A.Fullname = ds.Tables[0].Rows[0]["Fullname"].ToString();
-                A.Username = ds.Tables[0].Rows[0]["Username"].ToString();
-                A.Password = ds.Tables[0].Rows[0]["Password"].ToString();
-                A.Type = int.Parse(ds.Tables[0].Rows[0]["Type"].ToString());
+                A = result.GetValue("Detail").ToObject<AccountM>();
             }
 
             return A;
@@ -41,22 +38,24 @@ namespace TAIKHOAN.Areas.AccountPage.Models
 
         public static int Register(string Fullname, string Username, string Password)
         {
-            DataSet ds = new DataSet();
-            SqlParameter Result = new SqlParameter();
-            Result.DbType = DbType.Int32;
-            Result.ParameterName = "@Result";
-            Result.Direction = ParameterDirection.Output;
-
-            SqlParameter[] pars = {
-                new SqlParameter ("Fullname", Fullname),
-                new SqlParameter ("Username", Username),
-                new SqlParameter ("Password", Password),
-                Result
+            int code = 0;
+            var data = new DataRequest
+            {
+                Content = new
+                {
+                    Fullname = Fullname,
+                    Username = Username,
+                    Password = Password
+                }
             };
 
-            ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.StoredProcedure, "Register", pars);
+            var result = Function.CallAPI(Function.API_URL + "api/account/register", Function.API_Method.POST, data);
+            if (result.GetValue("StatusCode").ToString() == "200")
+            {
+                code = Int32.Parse(result.GetValue("Code").ToString());
+            }
 
-            return Int32.Parse(Result.Value.ToString());
+            return code;
         }
     }
 }

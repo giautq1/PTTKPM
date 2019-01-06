@@ -19,8 +19,8 @@ namespace API_DOVUI.Controllers
             try
             {
                 var Content = JsonConvert.DeserializeObject<dynamic>(req.Content.ToString());
-                string Username = Content["Username"].ToString();
-                string Password = Content["Password"].ToString();
+                string Username = Content.Username.ToString();
+                string Password = Content.Password.ToString();
 
                 AccountM AM = AccountM.Login(Username, Password);
                 

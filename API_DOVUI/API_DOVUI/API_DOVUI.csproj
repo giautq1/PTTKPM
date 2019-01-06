@@ -185,6 +185,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\HistoryController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
@@ -193,6 +194,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountM.cs" />
+    <Compile Include="Models\HistoryM.cs" />
+    <Compile Include="Models\PlayM.cs" />
+    <Compile Include="Models\PrizeMoney.cs" />
     <Compile Include="Models\QuestionM.cs" />
     <Compile Include="Models\ReqData.cs" />
     <Compile Include="Models\ResData.cs" />

@@ -29,3 +29,34 @@ E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\TAIKHOAN\bin\roslyn\VBCSCompil
 E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\TAIKHOAN\obj\Debug\TAIKHOAN.csproj.CoreCompileInputs.cache
 E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\TAIKHOAN\obj\Debug\TAIKHOAN.dll
 E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\TAIKHOAN\obj\Debug\TAIKHOAN.pdb
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\TAIKHOAN.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\TAIKHOAN.pdb
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\csc.exe
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\csc.exe.config
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\csc.rsp
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\csi.exe
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\csi.rsp
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\System.AppContext.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\vbc.exe
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\vbc.exe.config
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\vbc.rsp
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\VBCSCompiler.exe
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\obj\Debug\TAIKHOAN.csproj.CoreCompileInputs.cache
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\obj\Debug\TAIKHOAN.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\TAIKHOAN\obj\Debug\TAIKHOAN.pdb

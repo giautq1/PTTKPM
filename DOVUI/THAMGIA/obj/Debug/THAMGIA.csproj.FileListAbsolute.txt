@@ -30,3 +30,34 @@ E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\THAMGIA\obj\Debug\THAMGIA.cspr
 E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\THAMGIA\obj\Debug\THAMGIA.csproj.CoreCompileInputs.cache
 E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\THAMGIA\obj\Debug\THAMGIA.dll
 E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\THAMGIA\obj\Debug\THAMGIA.pdb
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\THAMGIA.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\THAMGIA.pdb
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\csc.exe
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\csc.exe.config
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\csc.rsp
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\csi.exe
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\csi.rsp
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\System.AppContext.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\vbc.exe
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\vbc.exe.config
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\vbc.rsp
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\VBCSCompiler.exe
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\obj\Debug\THAMGIA.csproj.CoreCompileInputs.cache
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\obj\Debug\THAMGIA.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\THAMGIA\obj\Debug\THAMGIA.pdb

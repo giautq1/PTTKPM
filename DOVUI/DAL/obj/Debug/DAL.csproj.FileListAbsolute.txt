@@ -4,3 +4,11 @@ E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\obj\Debug\DAL.csprojAssemb
 E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\obj\Debug\DAL.dll
 E:\Hoc tap\HCDH\PhanTichThietKePhanMem\DoAn\DOVUI\DAL\obj\Debug\DAL.pdb
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\DAL\bin\Debug\DAL.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\DAL\bin\Debug\DAL.pdb
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\DAL\obj\Debug\DAL.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\DAL\obj\Debug\DAL.pdb
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\QuanGiau\Desktop\1742020-1742025\PTTKPM\DOVUI\DAL\obj\Debug\DAL.csproj.CopyComplete

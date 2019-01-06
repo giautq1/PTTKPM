@@ -12,43 +12,63 @@ namespace THAMGIA.Areas.PlayPage.Models
     {
         public static int UpdateHistory(string HistoryID, string AccountID, int Level, string Total, int Type)
         {
-            SqlParameter HistoryIDOUT = new SqlParameter();
-            HistoryIDOUT.DbType = DbType.Int32;
-            HistoryIDOUT.ParameterName = "@HistoryIDOUT";
-            HistoryIDOUT.Direction = ParameterDirection.Output;
+            int isUpdate = 0;
+            try
+            {
+                var data = new DataRequest
+                {
+                    Content = new
+                    {
+                        HistoryID = HistoryID,
+                        AccountID = AccountID,
+                        Level = Level,
+                        Total = Total,
+                        Type = Type
+                    }
+                };
 
-            SqlParameter[] pars = {
-                new SqlParameter ("HistoryID", HistoryID),
-                new SqlParameter ("AccountID", AccountID),
-                new SqlParameter ("Level", Level),
-                new SqlParameter ("Total", Total),
-                new SqlParameter ("Type", Type),
-                HistoryIDOUT
-            };
+                var result = Function.CallAPI(Function.API_URL + "api/history/updatehistory", Function.API_Method.POST, data);
+                if (result.GetValue("StatusCode").ToString() == "200")
+                {
+                    isUpdate = int.Parse(result.GetValue("Detail").ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                //return ex.Message;
+            }
 
-            DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.StoredProcedure, "UpdateHistory", pars);
-
-            return Int32.Parse(HistoryIDOUT.Value.ToString());
+            return isUpdate;
         }
 
         public static int UpdateHistoryDetail(string DetailID, string HistoryID, string QuestionID, string AnswerLevel)
         {
-            SqlParameter DetailIDOUT = new SqlParameter();
-            DetailIDOUT.DbType = DbType.Int32;
-            DetailIDOUT.ParameterName = "@DetailIDOUT";
-            DetailIDOUT.Direction = ParameterDirection.Output;
+            int isUpdate = 0;
+            try
+            {
+                var data = new DataRequest
+                {
+                    Content = new
+                    {
+                        DetailID = DetailID,
+                        HistoryID = HistoryID,
+                        QuestionID = QuestionID,
+                        AnswerLevel = AnswerLevel
+                    }
+                };
 
-            SqlParameter[] pars = {
-                new SqlParameter ("DetailID", DetailID),
-                new SqlParameter ("HistoryID", HistoryID),
-                new SqlParameter ("QuestionID", QuestionID),
-                new SqlParameter ("AnswerLevel", AnswerLevel),
-                DetailIDOUT
-            };
+                var result = Function.CallAPI(Function.API_URL + "api/history/updatehistorydetail", Function.API_Method.POST, data);
+                if (result.GetValue("StatusCode").ToString() == "200")
+                {
+                    isUpdate = int.Parse(result.GetValue("Detail").ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                //return ex.Message;
+            }
 
-            DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString(), CommandType.StoredProcedure, "UpdateHistoryDetail", pars);
-
-            return Int32.Parse(DetailIDOUT.Value.ToString());
+            return isUpdate;
         }
     }
 }
